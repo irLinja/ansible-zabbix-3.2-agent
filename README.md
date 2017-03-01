@@ -23,6 +23,14 @@ The variables that can be passed to this role and a brief description about them
 	# Prefix to be added to the Hostname value in the agent config
 	zabbix_agent_hostname_prefix: ""
 
+How to Install
+--------------
+
+```
+cd /etc/ansible/roles
+git clone git@github.com:irLinja/ansible-zabbix-3.2-agent.git zabbix-agent 
+```
+
 Example Playbook
 ----------------
 
