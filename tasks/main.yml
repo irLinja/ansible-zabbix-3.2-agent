@@ -1,0 +1,9 @@
+---
+  # Add a fast check to speed reconfiguration
+  - stat: path=/usr/sbin/zabbix_agentd
+    register: zabbix_agent_installed
+
+  - include: install.yaml
+    when: not zabbix_agent_installed.stat.exists
+
+  - include: configure.yaml
